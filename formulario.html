@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="from.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <section class="painel">
+        <h1>Cadastro</h1><br>
+        <form action="">
+         <div class="coluna">
+            <div>
+                 <label for="Nome:">Nome</label><br>
+                 <input type="text" size="40" placeholder="Nome completo" class="prencher" >
+            </div>
+            <div>
+                 <label for="email">Email</label><br>
+                 <input type="text" placeholder="Email" size="40" class="prencher">
+            </div>
+         </div>
+         <div class="coluna">
+              <div>
+                  <label for="data">Nacimento</label><br>
+                  <input type="text"  class="prencher" onkeypress="$(this).mask('00/00/0000')">
+              </div>
+         <div>
+                    <label for="">Sexo</label><br>
+                    <label for="">masculino</label>
+                    <input type="radio" name="sexo" class="marcação">
+                    <label for="">faminino</label>
+                    <input type="radio" name="sexo" class="marcação">
+         </div>
+            <div>
+                   <label for="">Estado civil</label><br>
+                   <label for="">solteiro</label>
+                   <input type="radio" name="Ec" class="marcação">
+                   <label for="">casado</label>
+                   <input type="radio" name="Ec" class="marcação">
+                   <label for="">outros</label>
+                   <input type="radio" name="Ec" class="marcação">
+                   <label for=""></label>
+            </div>
+         </div>          
+         <div class="coluna">
+            <div>
+                <label for="telefone">Telefone</label><br>
+                <input type="text"  class="prencher" onkeypress="$(this).mask('(00) 0000-00009')" >
+            </div>
+            <div>
+                    <label for="rg">RG</label><br>
+                    <input type="text"  class="prencher" onkeypress="$(this).mask('00.000.000-0');" >
+            </div>
+            <div>
+                        <label for="cpf">CPF</label><br>
+                        <input type="text" class="prencher"  onkeypress="$(this).mask('000.000.000-00');" >
+            </div>
+         </div>
+         <div class="coluna">
+            <div>
+                <label for="cep" >CEP</label><br>
+                <input type="text" size="10" id="cep"   class="prencher" onkeypress="$(this).mask('00.000-000')" required>
+            </div>
+            <div>
+                    <label for="Cidade">Cidade</label><br>
+                    <input type="text" class="prencher" id="cidade">
+            </div>
+            <div>
+                        <label for="estado">Estado</label><br>
+                        <input type="text" size="5"  class="prencher" id="estado">
+            </div>
+            <div>
+                <label for="bairro">Bairro</label><br>
+                <input type="text" size="35"  class="prencher" id="bairro">
+            </div>
+         </div>  
+            <div class="coluna">
+              <div >
+                <label for=”arquivo”  >Selecione sua foto:</label><br>
+                <div class="arquivo">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="00" /> <input name="file" type="file" />
+                </div>
+              </div>
+              <div>
+                    <label for=”arquivo”>Comentario
+                    </label><br>
+                    <textarea rows=”5″ cols=”30″></textarea>
+                        
+              </div>
+            </div>
+            <div class="coluna">
+              <button>Enviar</button>
+            </div>
+        </form>
+    </section>
+
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+section{
+    width: 850px;
+    height: 700px;
+    background: linear-gradient(to right,#7412CB,#DC2B89);
+    text-align: center;
+    border: solid rgba(0, 0, 0, 0.781) 5px;
+    
+}
+h1{
+    margin-top: 10px;
+    font-size: 40px;
+    color: white;
+    font-family: Holtwood One SC, Helvetica, sans-serif;
+}
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    
+}
+
+.coluna{
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 0px;
+    font-size: 20px;
+}
+label{
+    color: white;
+    font-style: italic;
+    font-size: 22px;
+    text-shadow: black 2px 2px 3px;
+}
+
+.prencher{
+    height: 30px;
+    transition: 1.5s;
+    box-shadow: black 1px 1px 2px;
+    border: solid black 2px;
+    max-width: 350px;
+}
+.marcação{
+    height: 15px;
+    width: 15px;
+    margin: 3px;
+    
+}
+
+button{
+    width: 200px;
+    height: 35px;
+    border: solid black 2px;
+    background-color: white;
+    font-size: 20px;
+}
+textarea{
+    height: 100px;
+    width: 350px;
+    box-shadow: black 1px 1px 2px;
+    border: solid black 2px;
+    max-width: 350px;
+    max-height: 100px;
+    min-height: 50px;
+    min-width: 200px;
+}
+.arquivo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: black 1px 1px 2px;
+    border: solid black 2px;
+   height: 100px;
+   width: 350px;
+}
+
+</style>
+
+
+
+</body>
+<script>
+    "use strict";
+    const prencerformalario = (endereco) =>{
+      document.getElementById('cidade').value = endereco.localidade
+      document.getElementById(`estado`).value = endereco.uf
+      document.getElementById(`bairro`).value = endereco.bairro
+      }
+    const pesquisarcep = async() =>{
+      const valor = document.getElementById('cep').value;
+      const cep = valor.replace('.', '')
+      console.log (cep);
+      var url = `http://viacep.com.br/ws/${cep}/json/`;
+      const dados = await fetch(url);
+      const endereco = await dados.json();
+      prencerformalario(endereco);
+  
+}
+
+document.getElementById('cep').addEventListener('focusout',pesquisarcep);
+
+</script>
+<script src="confform.js"></script>
+
+</html>
